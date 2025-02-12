@@ -1,0 +1,14 @@
+my.name = readline("Enter your name :")
+age<-readline("Enter your age :")
+age<-as.integer(age)
+print(paste("Hi,",my.name,"next year you will be ",age+1,"years old"))
+-------------------------------------------------------------------------------
+Output:
+> my.name = readline("Enter your name :")
+Enter your name :NK
+> age<-readline("Enter your age :")
+Enter your age :18
+> age<-as.integer(age)
+> print(paste("Hi,",my.name,"next year you will be ",age+1,"years old"))
+[1] "Hi, NK next year you will be  19 years old"
+_________________________________________________________________________________________
