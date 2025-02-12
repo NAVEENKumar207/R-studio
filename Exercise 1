@@ -26,3 +26,24 @@ Enter a string :naveen
 Total Length : 6> 
 ________________________________________________________________________
 Program 3:
+x<-readline("Enter a Number :")
+x<-as.integer(x)
+res.fac<-function(x)
+{
+if(x==0) return(1)
+else return(x*res.fac(x-1))
+}
+res.fac(x)
+----------------------------------------------------------------------
+Output:
+> x<-readline("Enter a Number :")
+Enter a Number :8
+> x<-as.integer(x)
+> res.fac<-function(x)
++ {
++ if(x==0) return(1)
++ else return(x*res.fac(x-1))
++ }
+> res.fac(x)
+[1] 40320
+________________________________________________________________________
