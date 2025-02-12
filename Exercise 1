@@ -1,8 +1,9 @@
+Program 1:
 my.name = readline("Enter your name :")
 age<-readline("Enter your age :")
 age<-as.integer(age)
 print(paste("Hi,",my.name,"next year you will be ",age+1,"years old"))
--------------------------------------------------------------------------------
+----------------------------------------------------------------------
 Output:
 > my.name = readline("Enter your name :")
 Enter your name :NK
@@ -11,4 +12,17 @@ Enter your age :18
 > age<-as.integer(age)
 > print(paste("Hi,",my.name,"next year you will be ",age+1,"years old"))
 [1] "Hi, NK next year you will be  19 years old"
-_________________________________________________________________________________________
+________________________________________________________________________
+Program 2:
+str = readline("Enter a string :")
+res<- nchar(str)
+cat("Total Length :",res)
+----------------------------------------------------------------------
+Output:
+> str = readline("Enter a string :")
+Enter a string :naveen
+> res<- nchar(str)
+> cat("Total Length :",res)
+Total Length : 6> 
+________________________________________________________________________
+Program 3:
