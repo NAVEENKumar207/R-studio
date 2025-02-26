@@ -104,3 +104,105 @@ Enter the number 10
 [1] "10 x 10 = 100"
 ________________________________________________________________________
 Program 6:
+num = as.integer(readline("Enter the number "))
+if((num%%2)==0)
+{
+  print(paste(num,"is Even"))
+}else{
+  print(paste(num,"is odd"))
+}
+----------------------------------------------------------------------
+Output:
+> num = as.integer(readline("Enter the number "))
+Enter the number 225
+> if((num%%2)==0)
++ {
++   print(paste(num,"is Even"))
++ }else{
++   print(paste(num,"is odd"))
++ }
+[1] "225 is odd"
+________________________________________________________________________
+Program 7:
+num = as.double(readline("Enter the number :"))
+if(num>0){
+ print(paste(num,"is Positive"))
+}else{
+ if(num<0){
+ print(paste(num,"is negative"))
+}else{
+ print(paste(num,"is Zero")) }}
+----------------------------------------------------------------------
+Output:
+> num = as.double(readline("Enter the number :"))
+Enter the number :-2.5
+> if(num>0){
++  print(paste(num,"is Positive"))
++ }else{
++  if(num<0){
++  print(paste(num,"is negative"))
++ }else{
++  print(paste(num,"is Zero"))
++ }
++ }
+[1] "-2.5 is negative"
+________________________________________________________________________
+Program 8:
+lcm = function(x,y)
+{
+ if(x>y)
+ {
+  greatest = x
+ }
+ else{
+  greatest = y
+ }
+ while(TRUE)
+ {
+ if((greatest%%x==0)&&(greatest%%y==0))
+   {
+    lcm = greatest
+    break 
+   }
+   else{
+    greatest = greatest+1
+   } 
+ }
+ return(lcm)
+}
+x = as.integer(readline(prompt = "Enter the first number "))
+y = as.integer(readline(prompt = "Enter the second number "))
+print(paste("The L.C.M of",x,",",y,"is",lcm(x,y)))
+----------------------------------------------------------------------
+Output:
+> lcm = function(x,y)
++ {
++  if(x>y)
++  {
++   greatest = x
++  }
++  else{
++   greatest = y
++  }
++  while(TRUE)
++  {
++  if((greatest%%x==0)&&(greatest%%y==0))
++    {
++     lcm = greatest
++     break 
++    }
++    else{
++     greatest = greatest+1
++    } 
++  }
++  return(lcm)
++ }
+> 
+> x = as.integer(readline(prompt = "Enter the first number "))
+Enter the first number 2
+> y = as.integer(readline(prompt = "Enter the second number "))
+Enter the second number 3
+> print(paste("The L.C.M of",x,",",y,"is",lcm(x,y)))
+[1] "The L.C.M of 2 , 3 is 6"
+________________________________________________________________________
+Program 9:
