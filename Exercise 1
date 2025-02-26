@@ -206,3 +206,63 @@ Enter the second number 3
 [1] "The L.C.M of 2 , 3 is 6"
 ________________________________________________________________________
 Program 9:
+add = function(x,y){
+ return(x+y)
+}
+sub = function(x,y){
+ return(x-y)
+}
+multiply = function(x,y){
+ return(x*y)
+}
+divide = function(x,y){
+ return(x/y)
+}
+x = as.integer(readline(prompt = "Enter the first number :"))
+y = as.integer(readline(prompt = "Enter the second number :"))
+choice = as.integer(readline(prompt = "Enter the choice[1/2/3/4] :"))
+operator = switch(choice,"+","-","*","/")
+result = switch(choice,add(x,y),sub(x,y),multiply(x,y),divide(x,y))
+print(paste(x,operator,y,"=",result))
+----------------------------------------------------------------------
+Output:
+> add = function(x,y){
++  return(x+y)
++ }
+> sub = function(x,y){
++  return(x-y)
++ }
+> multiply = function(x,y){
++  return(x*y)
++ }
+> divide = function(x,y){
++  return(x/y)
++ }
+> x = as.integer(readline(prompt = "Enter the first number :"))
+Enter the first number :4
+> y = as.integer(readline(prompt = "Enter the second number :"))
+Enter the second number :2
+> choice = as.integer(readline(prompt = "Enter the choice[1/2/3/4] :"))
+Enter the choice[1/2/3/4] :1
+> operator = switch(choice,"+","-","*","/")
+> result = switch(choice,add(x,y),sub(x,y),multiply(x,y),divide(x,y))
+> print(paste(x,operator,y,"=",result))
+[1] "4 + 2 = 6"
+> choice = as.integer(readline(prompt = "Enter the choice[1/2/3/4] :"))
+Enter the choice[1/2/3/4] :2
+> operator = switch(choice,"+","-","*","/")
+> result = switch(choice,add(x,y),sub(x,y),multiply(x,y),divide(x,y))
+> print(paste(x,operator,y,"=",result))
+[1] "4 - 2 = 2"
+> choice = as.integer(readline(prompt = "Enter the choice[1/2/3/4] :"))
+Enter the choice[1/2/3/4] :3
+> operator = switch(choice,"+","-","*","/")
+> result = switch(choice,add(x,y),sub(x,y),multiply(x,y),divide(x,y))
+> print(paste(x,operator,y,"=",result))
+[1] "4 * 2 = 8"
+> choice = as.integer(readline(prompt = "Enter the choice[1/2/3/4] :"))
+Enter the choice[1/2/3/4] :4
+> operator = switch(choice,"+","-","*","/")
+> result = switch(choice,add(x,y),sub(x,y),multiply(x,y),divide(x,y))
+> print(paste(x,operator,y,"=",result))
+[1] "4 / 2 = 2"
