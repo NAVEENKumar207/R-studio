@@ -1,0 +1,42 @@
+________________________________________________________________________
+Program 1:
+x = c(4,8,9,6,58,24)
+y = c(5,9,35,87,45,62)
+sum = x+y
+print(paste("sum",sum))
+sub = x-y
+print(paste("subraction",sub))
+mul = x*y
+print(paste("Multiplication",mul))
+div = x/y
+print(paste("Division",div))
+com = x<=y
+print(com)
+length = length(x)
+print(paste("Length of x",length))
+---------------------------------------
+Output:
+> x = c(4,8,9,6,58,24)
+> y = c(5,9,35,87,45,62)
+> sum = x+y
+> print(paste("sum",sum))
+[1] "sum 9"   "sum 17"  "sum 44"  "sum 93"  "sum 103" "sum 86" 
+> sub = x-y
+> print(paste("subraction",sub))
+[1] "subraction -1"  "subraction -1"  "subraction -26" "subraction -81"
+[5] "subraction 13"  "subraction -38"
+> mul = x*y
+> print(paste("Multiplication",mul))
+[1] "Multiplication 20"   "Multiplication 72"   "Multiplication 315" 
+[4] "Multiplication 522"  "Multiplication 2610" "Multiplication 1488"
+> div = x/y
+> print(paste("Division",div))
+[1] "Division 0.8"                "Division 0.888888888888889" 
+[3] "Division 0.257142857142857"  "Division 0.0689655172413793"
+[5] "Division 1.28888888888889"   "Division 0.387096774193548" 
+> com = x<=y
+> print(com)
+[1]  TRUE  TRUE  TRUE  TRUE FALSE  TRUE
+> length = length(x)
+> print(paste("Length of x",length))
+[1] "Length of x 6"
