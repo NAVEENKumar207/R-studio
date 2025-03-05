@@ -178,5 +178,120 @@ $vectors
 [1] 6
 ________________________________________________________________________
 Program 9:
-A = matrix(c(1,2,3,4,5,6,7,8,9),nrow = 3,byrow = TRUE)
-print(paste)
+A=matrix(c(1,2,3,4,5,6,7,8,9),nrow=3,ncol=3,byrow=FALSE)
+print(paste("Matrix A"))
+print(A)
+B=matrix(c(5,2,1),nrow=3,ncol=1)
+print(paste("Matrix B"))
+print(B)
+C=cbind(A,B)
+print(C)
+addition=A+A
+print(paste("Matrix addition"))
+print(additon)
+subraction=A-A
+print(paste("Matrix subraction"))
+print(subraction)
+a=3
+c=a*A
+print(paste("Scalar Multiplication"))
+print(c)
+multiplication=A*A
+print(paste("Matrix Multiplication"))
+print(multiplication)
+transpose=t(A)
+print(paste("Transpose of Matrix A"))
+print(traanspose)
+eigenvalue=eigen(A)
+print(paste("eigen of matrix A"))
+print(eigenvalue)
+determinant=det(A)
+print(paste("determinant of matrix A"))
+print(determinant)
+inverse=solve(A)
+print(paste("inverse of matrix A"))
+print(inverse)
+
+> A=matrix(c(1,2,3,4,5,6,7,8,9),nrow=3,ncol=3,byrow=FALSE)
+> print(paste("Matrix A"))
+[1] "Matrix A"
+> print(A)
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+> B=matrix(c(5,2,1),nrow=3,ncol=1)
+> print(paste("Matrix B"))
+[1] "Matrix B"
+> print(B)
+     [,1]
+[1,]    5
+[2,]    2
+[3,]    1
+> C=cbind(A,B)
+> print(C)
+     [,1] [,2] [,3] [,4]
+[1,]    1    4    7    5
+[2,]    2    5    8    2
+[3,]    3    6    9    1
+> addition=A+A
+> print(paste("Matrix addition"))
+[1] "Matrix addition"
+> print(addition)
+     [,1] [,2] [,3]
+[1,]    2    8   14
+[2,]    4   10   16
+[3,]    6   12   18
+> subraction=A-A
+> print(paste("Matrix subraction"))
+[1] "Matrix subraction"
+> print(subraction)
+     [,1] [,2] [,3]
+[1,]    0    0    0
+[2,]    0    0    0
+[3,]    0    0    0
+> a=3
+> c=a*A
+> print(paste("Scalar Multiplication"))
+[1] "Scalar Multiplication"
+> print(c)
+     [,1] [,2] [,3]
+[1,]    3   12   21
+[2,]    6   15   24
+[3,]    9   18   27
+> multiplication=A*A
+> print(paste("Matrix Multiplication"))
+[1] "Matrix Multiplication"
+> print(multiplication)
+     [,1] [,2] [,3]
+[1,]    1   16   49
+[2,]    4   25   64
+[3,]    9   36   81
+> transpose=t(A)
+> print(paste("Transpose of Matrix A"))
+[1] "Transpose of Matrix A"
+> print(traanspose)
+Error in print(traanspose) : object 'traanspose' not found
+> eigenvalue=eigen(A)
+> print(paste("eigen of matrix A"))
+[1] "eigen of matrix A"
+> print(eigenvalue)
+eigen() decomposition
+$values
+[1]  1.611684e+01 -1.116844e+00 -5.700691e-16
+
+$vectors
+           [,1]       [,2]       [,3]
+[1,] -0.4645473 -0.8829060  0.4082483
+[2,] -0.5707955 -0.2395204 -0.8164966
+[3,] -0.6770438  0.4038651  0.4082483
+----------------------------------------------------------------------
+Output:
+> determinant=det(A)
+> print(paste("determinant of matrix A"))
+[1] "determinant of matrix A"
+> print(determinant)
+[1] 0
+> inverse=solve(A)
+Error in solve.default(A) : 
+  Lapack routine dgesv: system is exactly singular: U[3,3] = 0
