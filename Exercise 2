@@ -50,3 +50,74 @@ cumulative = cumsum(number)
 print(cumulative)
 ----------------------------------------------------------------------
 Output: 
+> number = c(2,5,69,5,7,9,52,88,45)
+> greater_than_10 = number[number>10]
+> print(greater_than_10)
+[1] 69 52 88 45
+> less_than_10 = number[number<10]
+> print(less_than_10)
+[1] 2 5 5 7 9
+> cumulative = cumsum(number)
+> print(cumulative)
+[1]   2   7  76  81  88  97 149 237 282
+________________________________________________________________________
+Program 3:
+num = c(55,86,48,22,35,96,25,11)
+mean = mean(num)
+median = median(num)
+maximum = max(num)
+minimum = min(num)
+standard_deviation = sd(num)
+print(paste("Mean : ",mean))
+print(paste("Median : ",median))
+print(paste("Maximum value : ",maximum))
+print(paste("Minimum : ",minimum))
+print(paste("Standard deviation : ",standard_deviation))
+----------------------------------------------------------------------
+Output: 
+> num = c(55,86,48,22,35,96,25,11)
+> mean = mean(num)
+> median = median(num)
+> maximum = max(num)
+> minimum = min(num)
+> standard_deviation = sd(num)
+> print(paste("Mean : ",mean))
+[1] "Mean :  47.25"
+> print(paste("Median : ",median))
+[1] "Median :  41.5"
+> print(paste("Maximum value : ",maximum))
+[1] "Maximum value :  96"
+> print(paste("Minimum : ",minimum))
+[1] "Minimum :  11"
+> print(paste("Standard deviation : ",standard_deviation))
+[1] "Standard deviation :  30.5555699855666"
+________________________________________________________________________
+Program 4:
+num = c(98,55,6,-87,-554,3,6,85)
+asc = sort(num)
+dec = sort(num,dec = TRUE)
+rev = rev(num)
+print(paste("Ascending Order"))
+print(asc)
+print(paste("Descending Order"))
+print(dec)
+print(paste("Reverse Order"))
+print(rev)
+----------------------------------------------------------------------
+Output: 
+> num = c(98,55,6,-87,-554,3,6,85)
+> asc = sort(num)
+> dec = sort(num,dec = TRUE)
+> rev = rev(num)
+> print(paste("Ascending Order"))
+[1] "Ascending Order"
+> print(asc)
+[1] -554  -87    3    6    6   55   85   98
+> print(paste("Descending Order"))
+[1] "Descending Order"
+> print(dec)
+[1]   98   85   55    6    6    3  -87 -554
+> print(paste("Reverse Order"))
+[1] "Reverse Order"
+> print(rev)
+[1]   85    6    3 -554  -87    6   55   98
