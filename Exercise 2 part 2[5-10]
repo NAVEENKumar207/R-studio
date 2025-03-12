@@ -211,7 +211,8 @@ print(determinant)
 inverse=solve(A)
 print(paste("inverse of matrix A"))
 print(inverse)
-
+----------------------------------------------------------------------
+Output:
 > A=matrix(c(1,2,3,4,5,6,7,8,9),nrow=3,ncol=3,byrow=FALSE)
 > print(paste("Matrix A"))
 [1] "Matrix A"
@@ -285,13 +286,3 @@ $vectors
 [1,] -0.4645473 -0.8829060  0.4082483
 [2,] -0.5707955 -0.2395204 -0.8164966
 [3,] -0.6770438  0.4038651  0.4082483
-----------------------------------------------------------------------
-Output:
-> determinant=det(A)
-> print(paste("determinant of matrix A"))
-[1] "determinant of matrix A"
-> print(determinant)
-[1] 0
-> inverse=solve(A)
-Error in solve.default(A) : 
-  Lapack routine dgesv: system is exactly singular: U[3,3] = 0
