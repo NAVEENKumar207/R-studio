@@ -6,3 +6,231 @@ qualify = c('yes','no','yes','no','yes','no','yes','no','yes','no')
 print("Original data Frame")
 df = data.frame(name,score,attempts,qualify)
 print(df)
+------------------------------------------------------------------------------------------------
+Output:
+[1] "Original data Frame"
+          name score attempts qualify
+1        Sedhu 13.50        1     yes
+2         Prem 55.00        3      no
+3  Naveenkumar 69.00        2     yes
+4          TMS 25.00        1      no
+5        Jeeva 25.60        3     yes
+6     Ritheesh 59.00        2      no
+7        Mohan 35.35        1     yes
+8         Bala 69.00        1      no
+9        Rishi 32.00        2     yes
+10      Deepak 15.00        3      no
+_________________________________________________________________________________________________
+Program 2:
+name = c('Sedhu','Prem','Naveenkumar','TMS','Jeeva','Ritheesh','Mohan','Bala','Rishi',' Deepak')
+score = c(13.5,55,69,25,25.6,59,35.35,69,32,15)
+attempts = c(1,3,2,1,3,2,1,1,2,3)
+qualify = c('yes','no','yes','no','yes','no','yes','no','yes','no')
+print("Original data Frame")
+df = data.frame(name,score,attempts,qualify)
+print(df)
+extract = head(df,5)
+extract
+extract = tail(df,5)
+extract
+------------------------------------------------------------------------------------------------
+Output:
+[1] "Original data Frame"
+> df = data.frame(name,score,attempts,qualify)
+> print(df)
+          name score attempts qualify
+1        Sedhu 13.50        1     yes
+2         Prem 55.00        3      no
+3  Naveenkumar 69.00        2     yes
+4          TMS 25.00        1      no
+5        Jeeva 25.60        3     yes
+6     Ritheesh 59.00        2      no
+7        Mohan 35.35        1     yes
+8         Bala 69.00        1      no
+9        Rishi 32.00        2     yes
+10      Deepak 15.00        3      no
+> extract = head(df,5)
+> extract
+         name score attempts qualify
+1       Sedhu  13.5        1     yes
+2        Prem  55.0        3      no
+3 Naveenkumar  69.0        2     yes
+4         TMS  25.0        1      no
+5       Jeeva  25.6        3     yes
+> extract = tail(df,5)
+> extract
+       name score attempts qualify
+6  Ritheesh 59.00        2      no
+7     Mohan 35.35        1     yes
+8      Bala 69.00        1      no
+9     Rishi 32.00        2     yes
+10   Deepak 15.00        3      no
+_________________________________________________________________________________________________
+Program 3:
+name = c('Sedhu','Prem','Naveenkumar','TMS','Jeeva','Ritheesh','Mohan','Bala','Rishi',' Deepak')
+score = c(13.5,55,69,25,25.6,59,35.35,69,32,15)
+attempts = c(1,3,2,1,3,2,1,1,2,3)
+qualify = c('yes','no','yes','no','yes','no','yes','no','yes','no')
+print("Original data Frame")
+df = data.frame(name,score,attempts,qualify)
+print(df)
+extract = df[,c("name","qualify")]
+extract
+extract = df[,c("name","score","qualify")]
+extract
+------------------------------------------------------------------------------------------------
+Output:
+[1] "Original data Frame"
+> df = data.frame(name,score,attempts,qualify)
+> print(df)
+          name score attempts qualify
+1        Sedhu 13.50        1     yes
+2         Prem 55.00        3      no
+3  Naveenkumar 69.00        2     yes
+4          TMS 25.00        1      no
+5        Jeeva 25.60        3     yes
+6     Ritheesh 59.00        2      no
+7        Mohan 35.35        1     yes
+8         Bala 69.00        1      no
+9        Rishi 32.00        2     yes
+10      Deepak 15.00        3      no
+> extract = df[,c("name","qualify")]
+> extract
+          name qualify
+1        Sedhu     yes
+2         Prem      no
+3  Naveenkumar     yes
+4          TMS      no
+5        Jeeva     yes
+6     Ritheesh      no
+7        Mohan     yes
+8         Bala      no
+9        Rishi     yes
+10      Deepak      no
+> extract = df[,c("name","score","qualify")]
+> extract
+          name score qualify
+1        Sedhu 13.50     yes
+2         Prem 55.00      no
+3  Naveenkumar 69.00     yes
+4          TMS 25.00      no
+5        Jeeva 25.60     yes
+6     Ritheesh 59.00      no
+7        Mohan 35.35     yes
+8         Bala 69.00      no
+9        Rishi 32.00     yes
+10      Deepak 15.00      no
+_________________________________________________________________________________________________
+Program 4:
+name = c('Sedhu','Prem','Naveenkumar','TMS','Jeeva','Ritheesh','Mohan','Bala','Rishi',' Deepak')
+score = c(13.5,55,69,25,25.6,59,35.35,69,32,15)
+attempts = c(1,3,2,1,3,2,1,1,2,3)
+qualify = c('yes','no','yes','no','yes','no','yes','no','yes','no')
+print("Original data Frame")
+df = data.frame(name,score,attempts,qualify)
+print(df)
+high_score = subset(df,score<55)
+print(high_score)
+------------------------------------------------------------------------------------------------
+Output:
+[1] "Original data Frame"
+> df = data.frame(name,score,attempts,qualify)
+> print(df)
+          name score attempts qualify
+1        Sedhu 13.50        1     yes
+2         Prem 55.00        3      no
+3  Naveenkumar 69.00        2     yes
+4          TMS 25.00        1      no
+5        Jeeva 25.60        3     yes
+6     Ritheesh 59.00        2      no
+7        Mohan 35.35        1     yes
+8         Bala 69.00        1      no
+9        Rishi 32.00        2     yes
+10      Deepak 15.00        3      no
+> high_score = subset(df,score<55)
+> print(high_score)
+      name score attempts qualify
+1    Sedhu 13.50        1     yes
+4      TMS 25.00        1      no
+5    Jeeva 25.60        3     yes
+7    Mohan 35.35        1     yes
+9    Rishi 32.00        2     yes
+10  Deepak 15.00        3      no
+_________________________________________________________________________________________________
+Program 5:
+name = c('Sedhu','Prem','Naveenkumar','TMS','Jeeva','Ritheesh','Mohan','Bala','Rishi',' Deepak')
+score = c(13.5,55,69,25,25.6,59,35.35,69,32,15)
+attempts = c(1,3,2,1,3,2,1,1,2,3)
+qualify = c('yes','no','yes','no','yes','no','yes','no','yes','no')
+print("Original data Frame")
+df = data.frame(name,score,attempts,qualify)
+print(df)
+age = c(18,18,18,18,18,18,18,18,18,18)
+new_df = cbind(df,age)
+new_df
+student = data.frame(name ="Susan",score ='26.28',attempts ='3',qualify ='yes',age ='18')
+new_df = rbind(new_df,student)
+new_df
+------------------------------------------------------------------------------------------------
+Output:
+[1] "Original data Frame"
+> df = data.frame(name,score,attempts,qualify)
+> print(df)
+          name score attempts qualify
+1        Sedhu 13.50        1     yes
+2         Prem 55.00        3      no
+3  Naveenkumar 69.00        2     yes
+4          TMS 25.00        1      no
+5        Jeeva 25.60        3     yes
+6     Ritheesh 59.00        2      no
+7        Mohan 35.35        1     yes
+8         Bala 69.00        1      no
+9        Rishi 32.00        2     yes
+10      Deepak 15.00        3      no
+> age = c(18,18,18,18,18,18,18,18,18,18)
+> new_df = cbind(df,age)
+> new_df
+          name score attempts qualify age
+1        Sedhu 13.50        1     yes  18
+2         Prem 55.00        3      no  18
+3  Naveenkumar 69.00        2     yes  18
+4          TMS 25.00        1      no  18
+5        Jeeva 25.60        3     yes  18
+6     Ritheesh 59.00        2      no  18
+7        Mohan 35.35        1     yes  18
+8         Bala 69.00        1      no  18
+9        Rishi 32.00        2     yes  18
+10      Deepak 15.00        3      no  18
+> student = data.frame(name ="Susan",score ='26.28',attempts ='3',qualify ='yes',age ='18')
+> new_df = rbind(new_df,student)
+> new_df
+          name score attempts qualify age
+1        Sedhu  13.5        1     yes  18
+2         Prem    55        3      no  18
+3  Naveenkumar    69        2     yes  18
+4          TMS    25        1      no  18
+5        Jeeva  25.6        3     yes  18
+6     Ritheesh    59        2      no  18
+7        Mohan 35.35        1     yes  18
+8         Bala    69        1      no  18
+9        Rishi    32        2     yes  18
+10      Deepak    15        3      no  18
+11       Susan 26.28        3     yes  18
+_________________________________________________________________________________________________
+Program 6:
+df1 = data.frame(ID = c(1,2,3), Name = c('Sedhu','Prem','Naveenkumar'))
+df2 = data.frame(ID = c(1,2,3), Salary = c(8000,1000,2000))
+mer_df = merge(df1,df2,by = 'ID')
+print(mer_df)
+------------------------------------------------------------------------------------------------
+Output:
+> df1 = data.frame(ID = c(1,2,3), Name = c('Sedhu','Prem','Naveenkumar'))
+> df2 = data.frame(ID = c(1,2,3), Salary = c(8000,1000,2000))
+> mer_df = merge(df1,df2,by = 'ID')
+> print(mer_df)
+  ID        Name Salary
+1  1       Sedhu   8000
+2  2        Prem   1000
+3  3 Naveenkumar   2000
+_________________________________________________________________________________________________
+Program 7:
