@@ -234,3 +234,78 @@ Output:
 3  3 Naveenkumar   2000
 _________________________________________________________________________________________________
 Program 7:
+data = read.csv(file.choose("NK.csv"))
+data
+extract = head(data,3)
+extract
+extract = tail(data,3)
+extract
+------------------------------------------------------------------------------------------------
+Output:
+data = read.csv(file.choose("NK.csv"))
+> data
+  s.No     Name Score Attempts Qualify
+1    1    Sedhu  12.5        1     yes
+2    2       NK  33.0        3      no
+3    3      Sai  15.6        2     yes
+4    4 Ritheesh  16.2        1     yes
+5    5     Prem  19.8        2      no
+> extract = head(data,3)
+> extract
+  s.No  Name Score Attempts Qualify
+1    1 Sedhu  12.5        1     yes
+2    2    NK  33.0        3      no
+3    3   Sai  15.6        2     yes
+> extract = tail(data,3)
+> extract
+  s.No     Name Score Attempts Qualify
+3    3      Sai  15.6        2     yes
+4    4 Ritheesh  16.2        1     yes
+5    5     Prem  19.8        2      no
+_________________________________________________________________________________________________
+Program 8:
+data = read.csv(file.choose("NK.csv"))
+data
+extract = data[,c("Name","Qualify")]
+extract
+extract = data[,c("Name","Attempts","Qualify")]
+extract
+------------------------------------------------------------------------------------------------
+Output:
+s.No     Name Score Attempts Qualify
+1     1    Sedhu  12.5        1     yes
+2     2       NK  33.0        3      no
+3     3      Sai  15.6        2     yes
+4     4 Ritheesh  16.2        1     yes
+5     5     Prem  19.8        2      no
+6     6    Jeeva  25.0        2      no
+7     7      TMS   3.0        4     yes
+8     8    Susan   6.0        3      no
+9     9    Mohan  24.6        1     yes
+10   10   Deepak  25.0        2     yes
+> extract = data[,c("Name","Qualify")]
+> extract
+       Name Qualify
+1     Sedhu     yes
+2        NK      no
+3       Sai     yes
+4  Ritheesh     yes
+5      Prem      no
+6     Jeeva      no
+7       TMS     yes
+8     Susan      no
+9     Mohan     yes
+10   Deepak     yes
+> extract = data[,c("Name","Attempts","Qualify")]
+> extract
+       Name Attempts Qualify
+1     Sedhu        1     yes
+2        NK        3      no
+3       Sai        2     yes
+4  Ritheesh        1     yes
+5      Prem        2      no
+6     Jeeva        2      no
+7       TMS        4     yes
+8     Susan        3      no
+9     Mohan        1     yes
+10   Deepak        2     yes
