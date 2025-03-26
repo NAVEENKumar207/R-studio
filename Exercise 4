@@ -6,5 +6,5 @@ regions = c("EAST","WEST","NORTH")
 barplot(values,main = "Total Revenue",names.arg=Months,xlab="Months",ylab="Revenue",col=colors,beside=FALSE)
 legend("topleft",region,cex=0.7,fill=colors)
 grid(nx=NA,ny=NULL,col="blue",ity="dotdash")
-_______________________________________________________________________________________________________________
+------------------------------------------------------------------------------------------------
 Output:
