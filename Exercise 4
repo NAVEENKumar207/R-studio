@@ -1,10 +1,20 @@
 Program 1:
 values= matrix(c(2,8,6,9,4,5,7,3,1,5,6,7,11,2,5),nrow=3,byrow=TRUE)
-colors= c("red","yellow","red")
+colors= c("red","black","red")
 Months = c("December","June","May","April","July")
-regions = c("EAST","WEST","NORTH")
-barplot(values,main = "Total Revenue",names.arg=Months,xlab="Months",ylab="Revenue",col=colors,beside=FALSE)
+region = c("EAST","WEST","NORTH")
+barplot(values,main = "Total Revenue",names.arg=Months,xlab="Months",ylab="Revenue",col=colors,beside=TRUE)
 legend("topleft",region,cex=0.7,fill=colors)
-grid(nx=NA,ny=NULL,col="blue",ity="dotdash")
+grid(nx=NA,ny=NULL,col="white",lty="dotdash")
 ------------------------------------------------------------------------------------------------
 Output:
+_________________________________________________________________________________________________
+Program 2:
+car_age = c(5,2,3,4,1,6,5,4,3,9,4,5)
+car_speed = c(122,121,120,110,111,123,224,125,126,124,210,220)
+plot(car_age,car_speed,main = "Scatter plot of Car Age and Car Speed",xlab="Car Age(in years)",ylab="Car Speed(km|h)",xlim=c(0,15),ylim=c(70,120),col="red",pch=19)
+grid(col="yellow",lty="dotted")
+------------------------------------------------------------------------------------------------
+Output:
+_________________________________________________________________________________________________
+Program 3:
