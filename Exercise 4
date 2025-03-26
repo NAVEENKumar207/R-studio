@@ -1,0 +1,10 @@
+Program 1:
+values= matrix(c(2,8,6,9,4,5,7,3,1,5,6,7,11,2,5),nrow=3,byrow=TRUE)
+colors= c("red","yellow","red")
+Months = c("December","June","May","April","July")
+regions = c("EAST","WEST","NORTH")
+barplot(values,main = "Total Revenue",names.arg=Months,xlab="Months",ylab="Revenue",col=colors,beside=FALSE)
+legend("topleft",region,cex=0.7,fill=colors)
+grid(nx=NA,ny=NULL,col="blue",ity="dotdash")
+_______________________________________________________________________________________________________________
+Output:
