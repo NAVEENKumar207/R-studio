@@ -26,3 +26,30 @@ lines(years,city_b,type="o",col="red",lwd=2,pch=17)
 legend("topright",legend=c("City A","City B"),col=c("blue","red"),lty=1,pch=c(16,17),lwd=2)
 grid(col="black",lty="dotted")
 //WRong
+------------------------------------------------------------------------------------------------
+Output:
+_________________________________________________________________________________________________
+Program 4:
+wage = c(12.5,15.2,17.6,22.4,25.9,11.4,16.2)
+num_workers = c(12,9,13,14,15,16,8)
+barplot(num_workers,names.arg = wage,col="darkblue",xlab="Weekly Wages",ylab="Numbers of Workers",main="Histogram of Weekly Wages",boder="red")
+------------------------------------------------------------------------------------------------
+Output:
+_________________________________________________________________________________________________
+Program 5:
+pieces = c(10,30,20,50)
+fruits = c("Apple","Banana","Pomegrante","Orange")
+colors = c("red","yellow","purple","grey")
+pie(pieces,lable=fruits,col = colors,main="Pie Chart of Fruits")
+legend("topright",legend=fruits,fill=colors)
+------------------------------------------------------------------------------------------------
+Output:
+_________________________________________________________________________________________________
+Program 6:
+salary_data = data.frame(dept = rep(c("HR","IT","Finance","marketing"),each=6),salary = c(25,36,12,14,15,24,24,15,15,32,14,25,26,28,27,29,35,80,90,45,85,65,32,41))
+boxplot(salary~dept,data=salary_data,col= c("blue","green","red","yellow"),main="Slary distribution by Department",xlab="Department",ylab="Salary(in THousands)")
+grid()
+------------------------------------------------------------------------------------------------
+Output:
+_________________________________________________________________________________________________
+Program 7:
