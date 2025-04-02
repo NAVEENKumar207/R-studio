@@ -17,3 +17,83 @@ Output:
 [1] 0.8622909
 _________________________________________________________________________________________________
 Program 3:
+x = c(65,66,67,68,69,70,71,73)
+y = c(68,62,68,69,73,72,71,77)
+correlation = cor(x , y , method= "kendall")
+print(correlation)
+------------------------------------------------------------------------------------------------
+Output:
+[1] 0.6910233
+_________________________________________________________________________________________________
+Program 4:
+x = c(65,66,67,68,69,70,71,73)
+y = c(151,152,153,154,155,156,157,158)
+data = data.frame(x,y)
+model = lm(y~x,data)
+cofficients = coef(model)
+intercept = cofficients[1]
+slope = cofficients[2]
+Regressinon_equation = paste("y =",round(slope,2),"* x +",round(intercept,2))
+print(Regressinon_equation)
+------------------------------------------------------------------------------------------------
+Output:
+[1] "y = 0.91 * x + 91.89"
+_________________________________________________________________________________________________
+Program 5:
+x = c(65,66,67,68,69,70,71,73)
+y = c(151,152,153,154,155,156,157,158)
+data = data.frame(x,y)
+model = lm(x~y,data)
+cofficients = coef(model)
+intercept = cofficients[1]
+slope = cofficients[2]
+Regressinon_equation = paste("x =",round(slope,2),"* y +",round(intercept,2))
+print(Regressinon_equation)
+------------------------------------------------------------------------------------------------
+Output:
+[1] "x = 1.08 * y + -98.75"
+_________________________________________________________________________________________________
+Program 6:
+machine1 = c(10,15,20,25)
+machine2 = c(9,8,6,4)
+machine3 = c(25,31,12,15)
+output = c(machine1,machine2,machine3)
+machines = factor(rep(c("Machine I","Machine II","Machine III"),each = 4))
+ANOVA_Table = aov(output ~ machines)
+summary(ANOVA_Table)
+------------------------------------------------------------------------------------------------
+Output:
+            Df Sum Sq Mean Sq F value Pr(>F)  
+machines     2  429.5  214.75   5.189 0.0317 *
+Residuals    9  372.5   41.39                 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+_________________________________________________________________________________________________
+Program 7:
+machine1 = c(10,15,20,25,NA,NA)
+machine2 = c(9,8,6,4,NA,NA)
+machine3 = c(25,31,12,15,5,NA)
+machine4 = c(55,6,8,2,41,5)
+output = c(machine1,machine2,machine3,machine4)
+machines = factor(rep(c("Machine I","Machine II","Machine III","Machine IV"),each = 6))
+ANOVA_Table = aov(output ~ machines)
+summary(ANOVA_Table)
+------------------------------------------------------------------------------------------------
+Output:
+            Df Sum Sq Mean Sq F value Pr(>F)
+machines     3  437.3   145.8     0.7  0.567
+Residuals   15 3124.5   208.3               
+5 observations deleted due to missingness
+_________________________________________________________________________________________________
+Program 8:
+yeild_data = data.frame(Farmers = rep(1:4,each=4),manures = factor(rep(c("A","B","C","D"),times=4)),Yield=c(22,25,15,35,24,26,16,45,29,36,19,15,17,18,13,18))
+ANOVA_Table = aov(Yield ~ Farmers + manures,data = yeild_data)
+summary(ANOVA_Table)
+------------------------------------------------------------------------------------------------
+Output:
+            Df Sum Sq Mean Sq F value Pr(>F)
+Farmers      1  137.8  137.81   2.087  0.176
+manures      3  361.2  120.40   1.823  0.201
+Residuals   11  726.4   66.04
+_________________________________________________________________________________________________
+Program 9:
