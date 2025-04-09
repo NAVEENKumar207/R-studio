@@ -61,3 +61,21 @@ p(Waiting Time Less Than 5 Minutes) =  0.3333333
 p(Waiting Time More Than 10 Minutes) =  0.3333333
 _________________________________________________________________________________________________
 Program 5:
+mu = 2040
+sigma = 60
+n = 2000
+prob_more_than_2150 = 1 - pnorm(2150, mean=mu, sd=sigma)
+bulbs_more_than_2150 = prob_more_than_2150 * n
+cat("Number of Bulbs Burning More Than 2150 Hours = ", round(bulbs_more_than_2150), "\n")
+prob_less_than_1950 = pnorm(1950, mean=mu, sd=sigma)
+bulbs_less_than_1950 = prob_less_than_1950 * n
+cat("Number of Bulbs Burning Less Than 1950 Hours = ", round(bulbs_less_than_1950), "\n")
+prob_between_1920_2160 = pnorm(2160, mean=mu, sd=sigma) - pnorm(1920, mean=mu, sd=sigma)
+bulbs_between_1920_2160 = prob_between_1920_2160 * n
+cat("Number of Bulbs Burning Between 1920 And 2160 Hours = ", round(bulbs_between_1920_2160), "\n")
+------------------------------------------------------------------------------------------------
+Output:
+Number of Bulbs Burning More Than 2150 Hours =  67
+Number of Bulbs Burning Less Than 1950 Hours =  134
+Number of Bulbs Burning Between 1920 And 2160 Hours =  1909
+_________________________________________________________________________________________________
