@@ -9,3 +9,28 @@ prob_at_most_3 = dbinom(3,size=n,prob=p)
 cat("p(At most 3 defective) = ",prob_at_most_3,"\n")
 prob_at_least_3 = 1-dbinom(2,size=n,prob=p)
 cat("p(At least 3 defective) = ",prob_at_least_3,"\n")
+------------------------------------------------------------------------------------------------
+Output:
+p(All are Good Bulbs) =  0.1215767 
+p(Exactly 3 defective) =  0.1901199 
+p(At most 3 defective) =  0.1901199 
+p(At least 3 defective) =  0.7148202 
+_________________________________________________________________________________________________
+Program 2:
+lambda = 4
+prob_5_Calls = dpois(5,lambda)
+cat("p(Exactly 5 Calls) = ",prob_5_Calls,"\n")
+prob_at_most_3_Calls = ppois(3,lambda)
+cat("p(At Most 3 Calls) = ",prob_at_most_3_Calls,"\n")
+prob_at_least_2_Calls = 1-ppois(1,lambda)
+cat("p(At Least 2 Calls) = ",prob_at_least_2_Calls,"\n")
+set.seed(123)
+simulated_data = rpois(1000,lambda)
+hist(simulated_data,breaks=10,col="red",main="Poisson Distributior  ",xlab="Number Of Calls Per Minute",ylab="Frequency",boder="black")
+------------------------------------------------------------------------------------------------
+Output:
+p(Exactly 5 Calls) =  0.1562935 
+p(At Most 3 Calls) =  0.4334701
+p(At Least 2 Calls) =  0.9084218
+_________________________________________________________________________________________________
+Program 3:
