@@ -1,0 +1,11 @@
+Program 1:
+n = 20
+p = 0.1
+prob_all_Good = dbinom(0,size=n,prob=p)
+cat("p(All are Good Bulbs) = ",prob_all_Good,"\n")
+prob_exact_3 = dbinom(3,size=n,prob=p)
+cat("p(Exactly 3 defective) = ",prob_exact_3,"\n")
+prob_at_most_3 = dbinom(3,size=n,prob=p)
+cat("p(At most 3 defective) = ",prob_at_most_3,"\n")
+prob_at_least_3 = 1-dbinom(2,size=n,prob=p)
+cat("p(At least 3 defective) = ",prob_at_least_3,"\n")
