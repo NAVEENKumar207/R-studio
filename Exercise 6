@@ -34,3 +34,30 @@ p(At Most 3 Calls) =  0.4334701
 p(At Least 2 Calls) =  0.9084218
 _________________________________________________________________________________________________
 Program 3:
+lambda = 5
+lambda_per_minutes = lambda/60
+prob_within_10_minutes = pexp(10,rate=lambda_per_minutes)
+cat("p(Next Call Within 10 Minutes) = ",prob_within_10_minutes,"\n")
+prob_After_15_minutes = pexp(15,rate=lambda_per_minutes)
+cat("p(Next Call After 15 Minutes) = ",prob_After_15_minutes,"\n")
+set.seed(123)
+random_samples = rexp(50,rate=lambda_per_minutes)
+hist(random_samples,breaks=10,probability= TRUE,col="red",main="Exponential Distribution",xlab="Time Between calls(minutes)",ylab="Frequency")
+------------------------------------------------------------------------------------------------
+Output:
+p(Next Call Within 10 Minutes) =  0.5654018
+p(Next Call After 15 Minutes) =  0.7134952
+_________________________________________________________________________________________________
+Program 4:
+a = 0
+b = 15
+prob_less_than_5_minutes = punif(5, min = a, max = b)
+cat("p(Waiting Time Less Than 5 Minutes) = ", prob_less_than_5_minutes, "\n")
+prob_more_than_10_minutes = 1 - punif(10, min = a, max = b)
+cat("p(Waiting Time More Than 10 Minutes) = ", prob_more_than_10_minutes, "\n")
+------------------------------------------------------------------------------------------------
+Output:
+p(Waiting Time Less Than 5 Minutes) =  0.3333333
+p(Waiting Time More Than 10 Minutes) =  0.3333333
+_________________________________________________________________________________________________
+Program 5:
